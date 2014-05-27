@@ -1,0 +1,196 @@
+<topic num='1'>
+<desc>You are writing an article about the US civil war. Find relevant documents that talk about the following aspects: causes of the civil war, economic causes, battles in the civil war, consequences of the civil war, how greed affected the civil war, civil war effects today, what weapons were used during civil war, what rifles were used.</desc>
+</topic>
+
+<topic num='2'>
+<desc>You want to buy a scooter. So you're interested in learning more facts about scooters including: what brands of scooters are out there? What brands of scooters are reliable? Which scooters are cheap? Which stores sell scooters? which stores sell the best scooters?</desc>
+</topic>
+
+<topic num='6'>
+<desc>An acquaintance of yours just had a heart attack. You want to know about the causes, symptoms, consequences, prevention and treatments of heart attacks. You also want to know what can aggravate heart attacks, statistics related to heart attacks, and the different types of heart disease.</desc>
+</topic>
+
+<topic num='8'>
+<desc>You just learned about the existence of long-term care insurance. You want to know about it: costs / premiums, companies that offer it, types of policies, tax deduction associated, people's opinion about long term care insurance; what are the differences between long term care insurance and health insurance? </desc>
+</topic>
+
+<topic num='11'>
+<desc>You want to know more about old US coins. Relevant information to you includes value of old US coins, types of old US coins, old US silver dollar, how to start collecting old US coins, how to sell old US coins and how to buy them, where to buy those coins.</desc>
+</topic>
+
+<topic num='12'>
+<desc>Your friend would like to quit smoking. You would like to provIde him with relevant information about: the different ways to quit smoking, programs available to help quit smoking, benefits of quitting smoking, second effects of quitting smoking, using hypnosis to quit smoking, using the cold turkey method to quit smoking</desc>
+</topic>
+
+<topic num='13'>
+<desc>You're planning a trip to Kansas city, MO. You want to know what Kansas city is famous for, what attractions are in Kansas city, what hotels are near the Kansas city airport, casinos in Kansas city, zoos and state parks in kansas city, upcoming kansas city chiefs games.</desc>
+</topic>
+
+<topic num='14'>
+<desc>You're looking for something fun to do, and you decide to go on a road trip. You want information about how to plan a road trip, items necessary on a long road trip, best road trips for sightseeing, top road trip itinerary, how to have fun on a road trip, road trip games for adults and road trip games for kids.</desc>
+</topic>
+
+<topic num='15'>
+<desc>Suppose you have been teaching at a high school for the past 15 years, and you wish to continue your education. You want information about which schools offer continuing education for high school teachers, which ones offer online courses, how important it is to continue your education as a high school teacher, what scholarships and grants are available to you, what free courses are out there for you.</desc>
+</topic>
+
+<topic num='16'>
+<desc>You are applying for a job at JP Morgan Chase as a computational scientist. You want to get ready for the interview by learning about their data centers, the locations of their data centers, the investment made on the data centers, where is their largest data center, how their data centers compare to Google, Microsoft and Facebook's data centers.</desc>
+</topic>
+
+<topic num='17'>
+<desc>You want to know what march madness refers to, which team won the championship in 2012, who was the runner-up in 2012, what was the host city and the name of the host stadium, what channel did the exclusive broadcast of the 2012 final four games, how many teams compete in the march madness, what's another slang expression for march madness, what expression describes the semifinals.</desc>
+</topic>
+
+<topic num='18'>
+<desc>You are writing an article about face transplants. You want to know when the first full face transplant in the world was performed, in what country, city and hospital it was performed. Who was the lead doctor? what was the patient's name and age? And what caused the patient's facial problem?</desc>
+</topic>
+
+<topic num='21'>
+<desc>You want to know what city and state Dulles airport is in, what shuttles ride-sharing vans and taxi cabs connect the airport to other cities, what hotels are close to the airport, what are some cheap off-airport parking, and what are the metro stops close to the dulles airport.</desc>
+</topic>
+
+<topic num='22'>
+<desc>For your music class, you have to write a paper about the boston pops. Information needed include: who is the conductor of the boston pops as of 2012? what is that conductor's salary? who is the manager? what is the manager's salary? what is the premier annual concert by the boston pops? what concert hall is home to the boston pops orchestra, and how many concerts have they had there?</desc>
+</topic>
+
+<topic num='23'>
+<desc>You want to know the following things about the game show jeopardy: how to play jeopardy? who is the biggest money-winner as of 2012? what's the name of jeopardy's theme song? who wrote the theme song? who was the first host? who were the first contestants of the show?</desc>
+</topic>
+
+<topic num='24'>
+<desc>You want to know about churchill downs. Some of the things you want to know include: the racing schedule at churchill downs, the seating chart, the breeders cup races, the Kentucky Derby museum.</desc>
+</topic>
+
+<topic num='25'>
+<desc>You are doing research on the general schedule (GS). The questions you would to answer include: what are the GS pay tables? Does the Federal Wage System affect the GS? Do all US federal government agencies use the GS pay tables? Find information about step increases.</desc>
+</topic>
+
+<topic num='26'>
+<desc>For economic reasons, you wish to switch from regular phones to internet phone services. You want to know: the best internet phone services, the cheapest internet phone services, the providers of VOIP internet phone services, features that great VOIP services have, providers that offer free calls from the US to some European countries, expert reviews about VOIP providers.</desc>
+</topic>
+
+<topic num='28'>
+<desc>Suppose you are a high school student looking to apply for a State University of New York (SUNY) college. You desire to know how many SUNY colleges there are and their names, which ones offer a bioinformatics degree, which ones offer athletic scholarships, which ones offer international student scholarships, where is SUNY Albany hospital located, reports of SUNY Plattsburgh athletics.</desc>
+</topic>
+
+<topic num='29'>
+<desc>After recent gun violence fatalities in the US, you want to know president Obama's position on gun control, find polls about gun control in the US, learn about opponents of gun control and their opinion, economic consequences of strict gun control laws, learn about current gun control laws.</desc>
+</topic>
+
+<topic num='30'>
+<desc>Your report on gun violence must answer these questions: What are the most violent gun violence events? How does gun violence affect US campuses? states with the most gun violence? total gun violence fatalities over the past 10 years? type of gun used the most in gun violence? Most deadly type of gun used in gun violence.</desc>
+</topic>
+
+<topic num='31'>
+<desc>You are writing an article about healthy nutrition. Aspects pertaining to your article are: healthy meals, healthy snacks, healthy eating plan, healthy nutrition for pregnant women, healthy nutrition for infants, healthy eating initiatives in schools, government programs to support healthy nutrition, losing weight.</desc>
+</topic>
+
+<topic num='32'>
+<desc>A friend has just advised you not to drink Red Bull. You are curious about what the side effects of Red Bull are? what are its health concerns? which of its ingredients are problematic? what countries have banned the use of Red Bull? You also want to find information about US laws proposing a ban on drinks like Red Bull.</desc>
+</topic>
+
+<topic num='33'>
+<desc>As a young entrepreneur, you are searching about the following: how to patent your idea? how much does it cost to patent? which institution oversees patent applications? where to find information about patent laws? who can help you filing a patent application? what's a provisional patent?</desc>
+</topic>
+
+<topic num='35'>
+<desc>You are writing an article about face transplants. You want general information about face transplants and how face transplants affect the lives of patients.</desc>
+</topic>
+
+<topic num='37'>
+<desc>In your attempt to get fit, you are looking for information on what possibilities (types of physical exercises, diets, etc...) you have in order to achieve your fitness goal.</desc>
+</topic>
+
+<topic num='38'>
+<desc>As a young information technology entrepreneur, you are looking for information about how to succeed in your new venture.</desc>
+</topic>
+
+<topic num='39'>
+<desc>In your attempt to get a pay raise, you would like to know what practices, attitudes and actions an employee should take in order to get a pay raise.</desc>
+</topic>
+
+<topic num='40'>
+<desc>Your country's economy hit a recession. You would like to know what are the best practices to prevent employee fraud ina rcession.</desc>
+</topic>
+
+<topic num='41'>
+<desc>You have just been promoted to manager. You are looking for information about the best way to evaluate your employees.</desc>
+</topic>
+
+<topic num='42'>
+<desc>You have just been elected events coordinator of an academic student association. You are looking for what events would make your student organization stand out.</desc>
+</topic>
+
+<topic num='43'>
+<desc>What are typical developmental milestones for infants age 0-12 months in East Asian countries (for example, China, South Korea, Japan, Thailand, etc)</desc>
+</topic>
+
+<topic num='45'>
+<desc>Portugal, Spain, Ireland, Greece, and Cyprus are some of the countries that have experienced severe economic downturns during the ongoing Eurozone crisis.  What actions are political leaders in Europe taking to resolve their respective economic troubles?  How are these actions meant to help?</desc>
+</topic>
+
+<topic num='47'>
+<desc>For your vacation, you want to go on a road-trip. You would like to know what makes a road-trip enjoyable as opposed to a boring road-trip.</desc>
+</topic>
+
+<topic num='48'>
+<desc>You are shopping for an internet phone service. You want to know determine what makes an internet phone service great.</desc>
+</topic>
+
+<topic num='49'>
+<desc>Amidst all the discussions about gun violence and gun control, you decided to find out whether gun control is a good remedy for mitigating gun violence, and whether banning certain types of guns would be something constitutional.</desc>
+</topic>
+
+<topic num='50'>
+<desc>For your philosophy assignment, you need to compare evidence that supports the existence of God to evidence that supports the naturalism theory, and determine/infer whether God exists or not.</desc>
+</topic>
+
+<topic num='51'>
+<desc>You have just received 2 job offers, one in the US and the other in UK. In order to choose where to go, you resort to comparing the health care and social security systems of both countries and choose the one that's best for workers.</desc>
+</topic>
+
+<topic num='52'>
+<desc>You would like to donate money to charities that fights either HIV/AIDS or malaria in Africa. Your preference is to donate to charities that fight the disease (either HIV/AIDS or malaria) that mostly negatively impacts the economy of African countries.</desc>
+</topic>
+
+<topic num='54'>
+<desc>You are a principal of a high school. You wish to emphasize on either teachers peer-evaluation or teachers evaluation by students. You need information about advantages and disadvantages of each option.</desc>
+</topic>
+
+<topic num='55'>
+<desc>Do infants age 0-12 months experience different developmental milestones depending on culture?</desc>
+</topic>
+
+<topic num='58'>
+ <desc>You just watched a documentary about illegal drugs like marijuana. Now you want to know why such drugs are illegal and alcohol is not, and whether illegal dugs are as detrimental to your health as alcohol.</desc>
+</topic>
+
+<topic num='60'>
+<desc>You are shopping for a cell phone plan. You are looking for information to help you decide what company to sign up with and which plan generally works for an average phone user.</desc>
+</topic>
+
+<topic num='62'>
+<desc>In your essay, you have to argue whether it's a good idea for a government to tax junk food and high calorie snacks.</desc>
+</topic>
+
+<topic num='63'>
+<desc>For an article you're writing, you need to find information to help you argue whether the US government should reduce its spending on space exploration or not.</desc>
+</topic>
+
+<topic num='64'>
+<desc>You have just read that setting the percentage of new women employees and minority employees may be a good idea for a company. You want to understand if this is true.</desc>
+</topic>
+
+<topic num='65'>
+<desc>You have a masters degree in Business. You want to find information to help you decide whether it is worth getting a PhD in Busines or not.</desc>
+</topic>
+
+<topic num='67'>
+<desc>Suppose you'd like to take a week-long vacation.  Research some possible destinations.  How do they compare in terms of cost (travel + room and board + entertainment), value (things to do), and feasibility (ease of getting there)?</desc>
+</topic>
+
+<topic num='69'>
+<desc>Suppose you're planning a trip to the United States.  You will be there for a month and able to travel within a 150-mile radius of your destination.  With that constraint, what are the best cities to consider as possible destinations?</desc>
+</topic>
+
