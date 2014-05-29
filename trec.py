@@ -2,6 +2,7 @@
 
 import xml.etree.ElementTree as ET
 import math
+import sys
 
 def getDictionary():
     with open('qrels.txt') as qrels:
@@ -34,10 +35,14 @@ def extractCurrentQuery():
     return queryList
 
 def createXML(queryList):
+    specials = {}.fromkeys([ line.rstrip() for line in open('specialList') ])
     parameters = ET.Element('parameters')
 
     for tuple in queryList:
         top, que = tuple
+        for alpha in que:
+            if alpha in specials:
+                que = que.replace(alpha, ' ')
         query   = ET.SubElement(parameters, 'query')
         type    = ET.SubElement(query, 'type')
         number  = ET.SubElement(query, 'number')
@@ -83,6 +88,7 @@ def calcTest(result_file, threshold):
                 List = []
                 cnt = 0
             cnt += 1
+        print(len(ndcgList))
         print(sum(ndcgList) / len(ndcgList))
 
 def main():
@@ -125,7 +131,12 @@ def main():
     # print(calcDCG(ranklist))
 
 if __name__ == '__main__':
-    # query = extractCurrentQuery()
+    if len(sys.argv) == 1:
+        query = extractCurrentQuery()
+        createXML(query)
     # createXML(query)
     # main()
-    calcTest('resultTrec', 100)
+    # calcTest('resultTrec', 100)
+    # calcTest('demo.txt', 100)
+    else:
+        calcTest(sys.argv[1], 100)
