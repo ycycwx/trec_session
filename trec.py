@@ -66,7 +66,10 @@ def calcIDCG():
     import pickle
     return pickle.load(open('IDCG.dat', 'rb'))
 
-def calcTest(result_file, threshold):
+def calcTest(result_file, threshold, topicFlag=True):
+    sess_to_topic = { line.strip().split()[0]: line.strip().split()[1] for line in open('sessiontopicmap.txt') }
+    print(sess_to_topic)
+
     IDCG = calcIDCG()
     topic_dict = getDictionary()
 
@@ -77,9 +80,11 @@ def calcTest(result_file, threshold):
         for line in rf:
             result = line.strip().split()
             if len(result) == 0 or result[-1] != 'indri': continue
+            if topicFlag == True:
+                result[0] = sess_to_topic[result[0]]
             List.append(topic_dict.get((int(result[0]), result[2]), 0))
             if cnt == threshold:
-                # print(List)
+                print(List[:10])
                 DCG     = calcDCG(List[:10])
                 # print(DCG)
                 NDCG    = IDCG[result[0]]
@@ -140,3 +145,4 @@ if __name__ == '__main__':
     # calcTest('demo.txt', 100)
     else:
         calcTest(sys.argv[1], 100)
+        # calcTest(sys.argv[1], 100, False)
