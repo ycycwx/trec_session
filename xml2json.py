@@ -25,12 +25,21 @@ def main():
     sessions = obj['sessiontrack2013']['session']
     cnt = 1
     for session in sessions:
-        if cnt == 88: break
+        # if cnt == 88: break
+        if cnt == 3: break
         # print(session['@num'])
         # print(session['topic']['@num'])
+        # for key in session.items():
+        #     print(key)
         interactions = session['interaction']
-        for interaction in interactions:
-            print(interaction)
+        # print(interactions)
+        # print(session['currentquery'])
+        # print(type(interactions))
+        # for interaction in interactions:
+        #     print(interaction)
+        #     print('==============')
+        #     # for k,v in interaction.items():
+        #     #     print(k,v)
         cnt += 1
 
 if __name__ == '__main__':

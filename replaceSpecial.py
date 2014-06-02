@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-def remove(filename, outfilename):
+def replace(filename, outfilename):
     specials = {}.fromkeys([ line.rstrip() for line in open('specialList') ])
     outFile = open(outfilename, 'w')
     with open(filename, 'r') as f:
@@ -12,4 +12,4 @@ def remove(filename, outfilename):
     outFile.close()
 
 if __name__ == '__main__':
-    remove('resultquery.xml', 'hbqQuery.xml')
+    replace('querys.xml', 'query.xml')

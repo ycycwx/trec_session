@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import collections
 import xml.etree.ElementTree as ET
 import math
 import sys
@@ -21,7 +22,8 @@ def extractCurrentQuery():
     queryList = []
     
     for session in root:
-        if session.attrib['num'] == '88': break
+        sess = session.attrib['num']
+        if sess == '88': break
 
         for topic in session.iter('topic'):
             top = topic.attrib['num']
@@ -30,7 +32,7 @@ def extractCurrentQuery():
             for query in currentquery.iter('query'):
                 que = query.text
 
-        queryList.append((top, que))
+        queryList.append((sess, que))
 
     return queryList
 
@@ -39,7 +41,7 @@ def createXML(queryList):
     parameters = ET.Element('parameters')
 
     for tuple in queryList:
-        top, que = tuple
+        sess, que = tuple
         for alpha in que:
             if alpha in specials:
                 que = que.replace(alpha, ' ')
@@ -48,17 +50,17 @@ def createXML(queryList):
         number  = ET.SubElement(query, 'number')
         text    = ET.SubElement(query, 'text')
         type.text   = 'indri'
-        number.text = top
+        number.text = sess
         text.text   = '#combine(' + que + ')'
 
     tree = ET.ElementTree(parameters)
-    tree.write('result.xml', encoding='utf-8')
+    tree.write('querys.xml', encoding='utf-8')
 
 def calcDCG(ranklist):
     cnt = 1
     DCG = 0
     for point in ranklist:
-        DCG += (2 ** point - 1)/ math.log(1 + cnt, 2)
+        DCG += (2 ** point - 1) / math.log(1 + cnt, 2)
         cnt += 1
     return DCG
 
@@ -68,7 +70,6 @@ def calcIDCG():
 
 def calcTest(result_file, threshold, topicFlag=True):
     sess_to_topic = { line.strip().split()[0]: line.strip().split()[1] for line in open('sessiontopicmap.txt') }
-    print(sess_to_topic)
 
     IDCG = calcIDCG()
     topic_dict = getDictionary()
@@ -82,9 +83,10 @@ def calcTest(result_file, threshold, topicFlag=True):
             if len(result) == 0 or result[-1] != 'indri': continue
             if topicFlag == True:
                 result[0] = sess_to_topic[result[0]]
+            # print(result[0], result[2])
             List.append(topic_dict.get((int(result[0]), result[2]), 0))
             if cnt == threshold:
-                print(List[:10])
+                # print(List[:10])
                 DCG     = calcDCG(List[:10])
                 # print(DCG)
                 NDCG    = IDCG[result[0]]
@@ -96,11 +98,13 @@ def calcTest(result_file, threshold, topicFlag=True):
         print(len(ndcgList))
         print(sum(ndcgList) / len(ndcgList))
 
-def main():
+def extractQuerys():
     topic_dict = getDictionary()
 
     tree = ET.parse('sessiontrack2013.xml')
     root = tree.getroot()
+
+    _dict = collections.defaultdict(list)
     
     # cnt = 0
     for session in root:
@@ -109,6 +113,7 @@ def main():
         # print('===============================')
         tuples = []
         # print(session.tag, session.attrib)
+        sessionID = session.attrib['num']
         # for i in session:
         #     print(i.tag)
         for topic in session.iter('topic'):
@@ -116,8 +121,9 @@ def main():
             # print(topic.attrib)
         for interaction in session.iter('interaction'):
             # print(interaction.tag, interaction.attrib)
-            # for query in interaction.iter('query'):
-            #     print(query.text)
+            for query in interaction.iter('query'):
+                # print(query.text)
+                _dict[sessionID].append(query.text.strip())
             for results in interaction.iter('results'):
                 # print(results.tag, results.attrib)
                 for result in results:
@@ -126,23 +132,42 @@ def main():
                         # print(clueweb12id.text)
                         clue_id = clueweb12id.text
                         tuples.append((topic_id, clue_id))
-    print(tuples)
+        for currentquery in session.iter('currentquery'):
+            for query in currentquery:
+                # print(query.text)
+                _dict[sessionID].append(query.text.strip())
 
-    ranklist = []
-    for tup in tuples:
-        ranklist.append(topic_dict.get(tup, -2))
-    print(ranklist)
+    for k,v in _dict.items():
+        # print(k)
+        # print(v)
+        _dict[k] = ' '.join(list(set(' '.join(_dict[k]).split())))
+
+    # for k, v in _dict.items():
+    #     print(k)
+    #     print(v)
+
+    # print(tuples)
+
+    # ranklist = []
+    # for tup in tuples:
+    #     ranklist.append(topic_dict.get(tup, -2))
+    # print(ranklist)
 
     # print(calcDCG(ranklist))
+    _list = sorted(_dict.items(), key=lambda k: int(k[0]))[:87]
+
+    return _list
 
 if __name__ == '__main__':
     if len(sys.argv) == 1:
         query = extractCurrentQuery()
         createXML(query)
     # createXML(query)
-    # main()
     # calcTest('resultTrec', 100)
     # calcTest('demo.txt', 100)
+    elif sys.argv[1] == 'all':
+        query = extractQuerys()
+        createXML(query)
     else:
         calcTest(sys.argv[1], 100)
         # calcTest(sys.argv[1], 100, False)

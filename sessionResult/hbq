@@ -3998,8 +3998,6 @@
 29 Q0 clueweb12-1004wb-85-11043 98 -9.30562 indri
 29 Q0 clueweb12-1003wb-26-23118 99 -9.30643 indri
 29 Q0 clueweb12-1809wb-38-19681 100 -9.30742 indri
-# EXCEPTION in query 29: IndriRunQuery.cpp(410): QueryThread::_runQuery Exception
-	../src/QueryEnvironment.cpp(890): Couldn't understand this query: Mismatched Token
 30 Q0 clueweb12-1806wb-42-29029 1 -13.2839 indri
 30 Q0 clueweb12-1806wb-83-10427 2 -13.2857 indri
 30 Q0 clueweb12-1807wb-58-20330 3 -13.287 indri
