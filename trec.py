@@ -58,7 +58,7 @@ def createXML(queryList):
 
 def calcDCG(ranklist):
     cnt = 1
-    DCG = 0
+    DCG = 0.0
     for point in ranklist:
         DCG += (2 ** point - 1) / math.log(1 + cnt, 2)
         cnt += 1
@@ -68,7 +68,7 @@ def calcIDCG():
     import pickle
     return pickle.load(open('IDCG.dat', 'rb'))
 
-def calcTest(result_file, threshold, topicFlag=True):
+def calcNDCG(result_file, threshold, topicFlag=True):
     sess_to_topic = { line.strip().split()[0]: line.strip().split()[1] for line in open('sessiontopicmap.txt') }
 
     IDCG = calcIDCG()
@@ -83,10 +83,10 @@ def calcTest(result_file, threshold, topicFlag=True):
             if len(result) == 0 or result[-1] != 'indri': continue
             if topicFlag == True:
                 result[0] = sess_to_topic[result[0]]
-            # print(result[0], result[2])
             List.append(topic_dict.get((int(result[0]), result[2]), 0))
             if cnt == threshold:
-                # print(List[:10])
+                print(List)
+                print(List[:10])
                 DCG     = calcDCG(List[:10])
                 # print(DCG)
                 NDCG    = IDCG[result[0]]
@@ -163,11 +163,11 @@ if __name__ == '__main__':
         query = extractCurrentQuery()
         createXML(query)
     # createXML(query)
-    # calcTest('resultTrec', 100)
-    # calcTest('demo.txt', 100)
+    # calcNDCG('resultTrec', 100)
+    # calcNDCG('demo.txt', 100)
     elif sys.argv[1] == 'all':
         query = extractQuerys()
         createXML(query)
     else:
-        calcTest(sys.argv[1], 100)
-        # calcTest(sys.argv[1], 100, False)
+        calcNDCG(sys.argv[1], 100)
+        # calcNDCG(sys.argv[1], 100, False)
